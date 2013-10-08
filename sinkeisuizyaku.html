@@ -23,7 +23,7 @@
              enableFlip = true,
              time = 0,
              timerId;        
-         
+
              function flip(card) {
                  if (!enableFlip) {
                      return;
@@ -75,41 +75,41 @@
                  for ( i = 0; i < CARD_NUM; i++ ) {
                      // 2つずつ同じ数を取得
                      num = Math.floor( i / 2 );
-		             do {
+                     do {
                          cardIndex = Math.floor( Math.random() * CARD_NUM );
-		             } while ( typeof cards[cardIndex] != 'undefined' );
-		             cards[cardIndex] = createCard(num);
-		         }
-		         for ( i = 0; i < CARD_NUM; i++ ) {
+                     } while ( typeof cards[cardIndex] != 'undefined' );
+                     cards[cardIndex] = createCard(num);
+                 }
+                 for ( i = 0; i < CARD_NUM; i++ ) {
                      stage.appendChild( cards[i] );
-		             if ( i % Math.sqrt( CARD_NUM ) == ( Math.sqrt( CARD_NUM ) - 1 ) ) {
+                     if ( i % Math.sqrt( CARD_NUM ) == ( Math.sqrt( CARD_NUM ) - 1 ) ) {
                          stage.appendChild( document.createElement( 'br' ) );
                      }
-		         }
-	         }
+                 }
+             }
              
-	         function createCard(num) {
+             function createCard(num) {
                  var card =  document.createElement('input');
-		         card.type = 'button';
-		         card.value = '?';
-		         card.dataset.num = num;
+                 card.type = 'button';
+                 card.value = '?';
+                 card.dataset.num = num;
                  
-		         card.onclick = function(){
+                 card.onclick = function(){
                      flip(this);
-		         };
-		         return card;
-	         }
+                 };
+                 return card;
+             }
              
-	         function runTimer() {
+             function runTimer() {
                  document.getElementById('time').innerHTML = time++;
-		         timerId = setTimeout(function () {
+	             timerId = setTimeout(function () {
                      runTimer();
-		         }, 10);
-	         }
+                 }, 10);
+             }
              
-	         initCards();
-	         runTimer();
-	     })();
+             initCards();
+             runTimer();
+         })();
 	    </script>
     </body>
 </html>
