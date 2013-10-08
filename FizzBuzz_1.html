@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>FizzBuzz</title>
+        <style>
+         input {
+             font-size: 18px;
+         }
+        </style>
+    </head>
+    <script type="text/javascript">
+     
+     function FizzBuzz() {
+         var FIZZBUZZ_COUNT = document.fizzbuzz.count.value;
+         const OUTPUT_FIZZ = 'Fizz';
+         const OUTPUT_BUZZ = 'Buzz';
+         var regexp = /^[0-9]+$/;
+
+         if (regexp.test( FIZZBUZZ_COUNT ) == false) {
+             alert("整数を入力してください。");
+         }
+         for ( i = 1; i <= FIZZBUZZ_COUNT; i++ ) {
+             if ( i % 3 == 0 && i % 5 == 0 ){
+                 document.write( OUTPUT_FIZZ + OUTPUT_BUZZ + "<br>");
+		     }
+		     else if ( i % 3 == 0 ) {
+                 document.write( OUTPUT_FIZZ + "<br>");
+		     }
+		     else if ( i % 5 == 0 ) {
+                 document.write( OUTPUT_BUZZ + "<br>");
+		     }
+		     else {
+                 document.write( i + "<br>");
+		     }
+		 }
+	 }
+    </script>
+
+    <body>
+        <form name="fizzbuzz">
+回数を入力してください:<input type="text" name="count"><br>
+            <input type="button" onclick="FizzBuzz()" value="表示"><br>
+        </form>
+    </body>
+</html>
