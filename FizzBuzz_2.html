@@ -23,11 +23,11 @@
          }
          
          for ( i = 1; i <= FIZZBUZZ_COUNT; i++ ) {
-		     str = i % 3 == 0 ? OUTPUT_FIZZ : "" ;
+             str = i % 3 == 0 ? OUTPUT_FIZZ : "" ;
 
-		     str += i % 5 == 0 ? OUTPUT_BUZZ 
-                  : i % 3 == 0 ? "" 
-                  : i;
+             str += i % 5 == 0 ? OUTPUT_BUZZ 
+                          : i % 3 == 0 ? "" 
+                          :              i;
 
              document.write(str + "<br>");
          }
