@@ -1,13 +1,13 @@
-function FizzBuzz() {
-    var FIZZBUZZ_COUNT = document.fizzbuzz.count.value;
-    const OUTPUT_FIZZ = 'Fizz';
-    const OUTPUT_BUZZ = 'Buzz';
+function FizzBuzz( count ) {
+    var OUTPUT_FIZZ = 'Fizz';
+    var OUTPUT_BUZZ = 'Buzz';
     var regexp = /^[0-9]+$/;
     
-    if (regexp.test( FIZZBUZZ_COUNT ) == false) {
+    if (regexp.test( count ) == false) {
         alert("整数を入力してください。");
     }
-    for ( i = 1; i <= FIZZBUZZ_COUNT; i++ ) {
+
+    for ( i = 1; i <= count; i++ ) {
         if ( i % 3 == 0 && i % 5 == 0 ){
             document.write( OUTPUT_FIZZ + OUTPUT_BUZZ + "<br>");
         }
