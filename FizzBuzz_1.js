@@ -3,22 +3,24 @@ function FizzBuzz( count ) {
     var OUTPUT_BUZZ = 'Buzz';
     var regexp = /^[0-9]+$/;
     
-    if (regexp.test( count ) === false) {
+    if ( regexp.test( count ) === false ) {
         alert("整数を入力してください。");
+        return;
     }
 
-    for ( i = 1; i <= count; i++ ) {
+    for ( var i = 1; i <= count; i++ ) {
         if ( i % 3 === 0 && i % 5 === 0 ){
-            document.write( OUTPUT_FIZZ + OUTPUT_BUZZ + "<br>");
+            document.write( OUTPUT_FIZZ + OUTPUT_BUZZ );
         }
         else if ( i % 3 === 0 ) {
-            document.write( OUTPUT_FIZZ + "<br>");
+            document.write( OUTPUT_FIZZ );
         }
         else if ( i % 5 === 0 ) {
-            document.write( OUTPUT_BUZZ + "<br>");
+            document.write( OUTPUT_BUZZ );
         }
         else {
-            document.write( i + "<br>");
+            document.write( i );
         }
+        document.write( "<br>" );
     }
 }

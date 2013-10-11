@@ -2,7 +2,7 @@
     var cards = [],
     CARD_NUM = 16,
     currentNum, // o or 1
-    openedCard, // 0 .. 3
+    openedCard, // 0 .. CARD_NUM - 1
     correctNum = 0,
     enableFlip = true,
     time = 0,
@@ -30,7 +30,7 @@
         }
     }
              
-    function judge(card) {
+    function judge( card ) {
         if ( currentNum == card.dataset.num ) {
             //正解処理
             correctNum++;
@@ -42,7 +42,7 @@
         else {
             //不正解
             enableFlip = false;
-            setTimeout(function() {
+            setTimeout( function() {
                 openedCard.value = '?';
                 card.value = '?';
                 enableFlip = true;
@@ -61,8 +61,8 @@
             num = Math.floor( i / 2 );
             do {
                 cardIndex = Math.floor( Math.random() * CARD_NUM );
-            } while ( typeof cards[cardIndex] != 'undefined' );
-            cards[cardIndex] = createCard(num);
+            } while ( typeof cards[cardIndex] != 'undefined' ); // 定義されているかぎりループ
+            cards[cardIndex] = createCard( num );
         }
         for ( i = 0; i < CARD_NUM; i++ ) {
             stage.appendChild( cards[i] );
@@ -72,7 +72,7 @@
         }
     }
              
-    function createCard(num) {
+    function createCard( num ) {
         var card =  document.createElement('input');
         card.type = 'button';
         card.value = '?';

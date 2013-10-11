@@ -1,21 +1,22 @@
 // 3項演算子利用
-function FizzBuzz() {
-    var FIZZBUZZ_COUNT = document.fizzbuzz.count.value;
-    const OUTPUT_FIZZ = 'Fizz';
-    const OUTPUT_BUZZ = 'Buzz';
+function FizzBuzz( count ) {
+    var OUTPUT_FIZZ = 'Fizz';
+    var OUTPUT_BUZZ = 'Buzz';
     var regexp = /^[0-9]+$/;
+    var str;
          
-    if ( regexp.test( FIZZBUZZ_COUNT ) == false ) {
+    if ( regexp.test( count ) === false ) {
         alert( "整数を入力してください。" );
+        return;
     }
          
-    for ( i = 1; i <= FIZZBUZZ_COUNT; i++ ) {
-        str = i % 3 == 0 ? OUTPUT_FIZZ : "" ;
+    for ( var i = 1; i <= count; i++ ) {
+        str = i % 3 === 0 ? OUTPUT_FIZZ : "" ;
         
-        str += i % 5 == 0 ? OUTPUT_BUZZ 
-            : i % 3 == 0 ? "" 
+        str += i % 5 === 0 ? OUTPUT_BUZZ 
+            : i % 3 === 0 ? "" 
             :              i;
 
-        document.write(str + "<br>");
+        document.write( str + "<br>" );
     }
 }
