@@ -5,7 +5,7 @@ function FizzBuzz( count ) {
     var regexp = /^[0-9]+$/;
     var str;
          
-    if ( regexp.test( count ) === false ) {
+    if ( !regexp.test( count ) ) {
         alert( "整数を入力してください。" );
         return;
     }
