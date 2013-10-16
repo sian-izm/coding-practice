@@ -1,4 +1,4 @@
-// 3項演算子を利用した短縮系
+// 3項演算子を利用し、計算量削減 + ショートコーディング
 function FizzBuzz( count ) {
     var OUTPUT_FIZZ = 'Fizz';
     var OUTPUT_BUZZ = 'Buzz';

@@ -1,4 +1,4 @@
-// 3項演算子利用
+// 3項演算子利用 ( 練習用 )
 function FizzBuzz( count ) {
     var OUTPUT_FIZZ = 'Fizz';
     var OUTPUT_BUZZ = 'Buzz';
@@ -14,8 +14,8 @@ function FizzBuzz( count ) {
         str = i % 3 === 0 ? OUTPUT_FIZZ : "" ;
         
         str += i % 5 === 0 ? OUTPUT_BUZZ 
-            : i % 3 === 0 ? "" 
-            :              i;
+             : i % 3 === 0 ? "" 
+             :              i;
 
         document.write( str + "<br>" );
     }
