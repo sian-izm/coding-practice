@@ -11,7 +11,7 @@ DizzFizzBuzz.prototype = new FizzBuzz();
 DizzFizzBuzz.prototype.constructor = DizzFizzBuzz;
 
 // add judge_dizz method
-DizzFizzBuzz.prototype.judge_dizz = function ( n ) {
+DizzFizzBuzz.prototype.speak = function ( n ) {
     // 3でも5でも7でも割り切れるときはDizzFizzBuzz
     if ( n % 3 === 0 && n % 5 === 0 && n % 7 === 0 ) return "DizzFizzBuzz";
     // 5でも7でも割り切れるときはDizzBuzz
@@ -21,7 +21,7 @@ DizzFizzBuzz.prototype.judge_dizz = function ( n ) {
     // 7で割り切れるときはDizz
     if ( n % 7 === 0 )  return "Dizz";
     // 上記いずれでも無い時は、0を返す.
-    FizzBuzz.prototype.speak( n );
+    return FizzBuzz.prototype.speak( n );
 };
 
 var dfbOutput = new DizzFizzBuzz();
