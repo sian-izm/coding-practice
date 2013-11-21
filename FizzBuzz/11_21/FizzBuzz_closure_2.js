@@ -13,7 +13,6 @@ function FizzBuzz() {
     };
     this.getNumber = function () { 
         var num = n.toString();
-        this.increment();
         return num;
     };
     this.increment = function () { 
@@ -33,9 +32,10 @@ FizzBuzz.prototype.speak = function () {
     }
     else if ( this.isAbleToBeDevidedByFive() ) { 
         this.increment();
-	    return "Buzz";
+        return "Buzz";
     }
     else {
+        this.increment();
         return this.getNumber();
     }
 }
