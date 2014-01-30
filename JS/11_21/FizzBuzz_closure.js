@@ -21,12 +21,17 @@ function FizzBuzz() {
 
     return {
         speak : function () {
-            return speak();
+            return this.speak();
         },
         shout : function () {
-            return shout();
+            return this.shout();
         }
     };
 }
+
+var fizzbuzz = new FizzBuzz();
+//var fizzbuzz = FizzBuzz();
+console.log(fizzbuzz.speak);
+
 
 exports.FizzBuzz = FizzBuzz;

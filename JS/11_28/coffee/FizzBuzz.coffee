@@ -1,8 +1,11 @@
 class FizzBuzz
+    n = 1
+    privateMethod = ->
+        n % 3 is 0
     constructor : ->   
         n = 1
         @isAbleToBeDevidedByThree = ->
-            true if n % 3 is 0
+            n % 3 is 0
         @isAbleToBeDevidedByFive = ->
             true if n % 5 is 0
         @getNumber = ->
@@ -11,20 +14,22 @@ class FizzBuzz
             n++
 
     speak : ->
-        if @isAbleToBeDevidedByThree() &&  @isAbleToBeDevidedByFive()
-            @increment()
+        c = if @isAbleToBeDevidedByThree() and  @isAbleToBeDevidedByFive()
+            #@increment()
             "FizzBuzz"
         else if @isAbleToBeDevidedByThree()
-            @increment()
+            #@increment()
             "Fizz"
         else if  @isAbleToBeDevidedByFive()
-            @increment()
+            #@increment()
             "Buzz"
         else
-            num = @getNumber()
-            @increment()
-            num
-            
-#fizz_buzz = new FizzBuzz()
+            @getNumber()
+            #@increment()
+            #num
+        @increment()   
+        c
+fizz_buzz = new FizzBuzz()
+console.log(fizz_buzz.isAbleToBeDevidedByThree())
 #for i in [1..16]
 #    console.log(fizz_buzz.speak())    

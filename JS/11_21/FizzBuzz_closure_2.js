@@ -1,5 +1,6 @@
 // FizzBuzz
 function FizzBuzz() {
+//    var this = {};
     var n = 1;
     this.isAbleToBeDevidedByThree = function () {
         if ( n % 3 === 0 ) { 
@@ -18,6 +19,7 @@ function FizzBuzz() {
     this.increment = function () { 
         n++;
     };
+//    return this;
 }
 
 FizzBuzz.prototype.speak = function () {
@@ -35,9 +37,19 @@ FizzBuzz.prototype.speak = function () {
         return "Buzz";
     }
     else {
+        var num = this.getNumber();
         this.increment();
-        return this.getNumber();
+        return num;
     }
+}
+
+
+// newしないとprototypeが継承できないためspeakメソッドが使えない。
+//var fizz_buzz = FizzBuzz();
+
+var fizz_buzz = new FizzBuzz();
+for ( var i = 1; i <= 16; i++ ){
+    console.log(fizz_buzz.speak());
 }
 
 //exports.FizzBuzz = FizzBuzz;
