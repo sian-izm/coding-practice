@@ -51,5 +51,3 @@ var fizz_buzz = new FizzBuzz();
 for ( var i = 1; i <= 16; i++ ){
     console.log(fizz_buzz.speak());
 }
-
-//exports.FizzBuzz = FizzBuzz;
