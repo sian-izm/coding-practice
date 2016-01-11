@@ -12,7 +12,7 @@ end
 car1 = Car.new()
 car1.setName("crown")
 
-car1 ||= Car.new()
+car2 ||= Car.new()
 car2.setName("civic")
 
 car1.dispName()
